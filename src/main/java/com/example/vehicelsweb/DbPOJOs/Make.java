@@ -18,8 +18,8 @@ public class Make implements DbPojo{
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date yearestablished;
     private int networth;
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[MAKE_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[MAKE_FIELDS.length];
 
     public Make(int carmakeid, int country, String makename, Date yearestablished, int networth) {
         this.carmakeid = carmakeid;

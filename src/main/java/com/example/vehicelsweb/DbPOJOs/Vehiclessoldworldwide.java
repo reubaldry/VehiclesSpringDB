@@ -16,8 +16,8 @@ public class Vehiclessoldworldwide implements DbPojo{
     private int countrysoldin;
     private int amountsoldfor;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[VEHICLESSOLDWORLDWIDE_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[VEHICLESSOLDWORLDWIDE_FIELDS.length];
 
     public Vehiclessoldworldwide(int vehiclessoldid, int carmodel, int currency, int countrysoldin, int amountsoldfor) {
         this.vehiclessoldid = vehiclessoldid;

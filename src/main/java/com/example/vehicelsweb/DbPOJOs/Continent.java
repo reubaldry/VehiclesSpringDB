@@ -14,8 +14,8 @@ public class Continent implements DbPojo{
     private int continentid;
     private String continentname;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[2];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[2];
 
     public Continent(int continentid, String continentname) {
         this.continentid = continentid;

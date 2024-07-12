@@ -13,8 +13,8 @@ public class Fueltype implements DbPojo{
     private int fueltypeid;
     private String fueltypename;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[FUELTYPE_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[FUELTYPE_FIELDS.length];
 
     public Fueltype(String fueltypename, int fueltypeid) {
         this.fueltypename = fueltypename;

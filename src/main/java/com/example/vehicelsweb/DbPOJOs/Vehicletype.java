@@ -13,8 +13,8 @@ public class Vehicletype implements DbPojo{
     private int vehicletypeid;
     private String vehicletypename;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[VEHICLETYPE_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[VEHICLETYPE_FIELDS.length];
 
     public Vehicletype(String vehicletypename, int vehicletypeid) {
         this.vehicletypename = vehicletypename;

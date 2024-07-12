@@ -22,8 +22,8 @@ public class Model implements DbPojo{
     private int numberofdoors;
     private boolean iselectric;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[MODEL_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[MODEL_FIELDS.length];
 
     public Model(int carmodelid, int modelfueltype, int typeofvehicle, int manufacturelocation, int carmake,
                  String modelname, boolean stillproduced, int numberofcylinders, int enginesize, int numberofdoors, boolean iselectric) {

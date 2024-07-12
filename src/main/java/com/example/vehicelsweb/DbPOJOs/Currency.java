@@ -15,8 +15,8 @@ public class Currency implements DbPojo{
     private String currencyname;
     private String currencysymbol;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[CURRENCY_FIELDS.length];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[CURRENCY_FIELDS.length];
 
     public Currency(int currencyid, String currencyname, String currencysymbol) {
         this.currencyid = currencyid;

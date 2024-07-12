@@ -15,8 +15,8 @@ public class Country implements DbPojo{
     private int continent;
     private String countryname;
 
-    private List<StringField> fields = new ArrayList<>();
-    private StringField[] values = new StringField[3];
+    private final List<StringField> fields = new ArrayList<>();
+    private final StringField[] values = new StringField[3];
 
     public Country(int countryid, int continent, String countryname) {
         this.countryid = countryid;
