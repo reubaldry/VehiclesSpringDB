@@ -132,8 +132,6 @@ public class SelectController {
         model.addAttribute("entries", entries);
         model.addAttribute("fields", fields);
 
-        System.out.println(table);
-
         return "displaySelection";
     }
 

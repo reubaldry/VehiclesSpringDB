@@ -30,10 +30,8 @@ public class VehiclesController {
     public RedirectView actionAdd(@ModelAttribute StringField stringField, Model model) {
 
         if (stringField.getFieldValue().equals(INSERT)) {
-            System.out.println("Inserting");
             return new RedirectView("/insert");
         } else if (stringField.getFieldValue().equals(SELECT)) {
-            System.out.print("Selecting\n");
             return new RedirectView("/select");
         }
 
