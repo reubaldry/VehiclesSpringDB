@@ -58,6 +58,6 @@ public class FueltypeController {
 
         fueltypeDao.save(fueltype);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

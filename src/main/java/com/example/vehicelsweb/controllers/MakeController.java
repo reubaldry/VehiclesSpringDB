@@ -62,6 +62,6 @@ public class MakeController {
 
         makeDao.save(make);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

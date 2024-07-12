@@ -57,6 +57,6 @@ public class CurrencyController {
 
         currencyDao.save(currency);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

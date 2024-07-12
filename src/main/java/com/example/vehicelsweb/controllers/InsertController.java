@@ -34,4 +34,14 @@ public class InsertController {
         return new RedirectView("/insert/" + table.getFieldValue());
     }
 
+    @GetMapping("/insert/success")
+    public String success() {
+        return "success";
+    }
+
+    @PostMapping("/insert/success")
+    public RedirectView goHome() {
+        return new RedirectView("/home");
+    }
+
 }

@@ -70,7 +70,7 @@ public class ModelController {
 
         modelDao.save(model);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 
 }

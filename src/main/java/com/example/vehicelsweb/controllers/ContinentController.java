@@ -58,6 +58,6 @@ public class ContinentController {
 
         continentDao.save(continent);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

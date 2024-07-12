@@ -63,6 +63,6 @@ public class CountryController {
 
         countryDao.save(country);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

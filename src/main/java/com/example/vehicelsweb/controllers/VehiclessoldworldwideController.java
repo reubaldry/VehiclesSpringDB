@@ -71,6 +71,6 @@ public class VehiclessoldworldwideController {
 
         vehiclessoldworldwideDao.save(vehiclessoldworldwide);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

@@ -59,6 +59,6 @@ public class VehicletypeController {
 
         vehicletypeDao.save(vehicletype);
 
-        return new RedirectView("/home");
+        return new RedirectView("/insert/success");
     }
 }

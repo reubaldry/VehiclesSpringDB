@@ -36,7 +36,7 @@ public class VehiclesController {
         }
 
         else {
-            return new RedirectView("/home");
+            return new RedirectView("/insert/success");
         }
     }
 }
