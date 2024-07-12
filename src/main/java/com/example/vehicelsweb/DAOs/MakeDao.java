@@ -28,7 +28,6 @@ public class MakeDao implements ObjectDao<Make>{
     public void save(Make make) {
         SimpleJdbcInsert simpleJdbcInsert = new SimpleJdbcInsert(jdbcTemplate).withTableName("make").usingGeneratedKeyColumns("carmakeid");
 
-
         Map<String, Object> parameters = new HashMap<>(4);
 
         parameters.put("country", make.getCountry());
