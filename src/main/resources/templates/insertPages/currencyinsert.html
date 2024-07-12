@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+</head>
+
+<body>
+<h1>Insert into currencies:</h1>
+
+<form action="#" method="post" th:action="@{/insert/currency}" th:object="${currency}">
+    <label>Currency name:</label>
+    <input th:field="*{currencyname}" type="text"/>
+    <span th:if="${errors.contains('currencyname')}"><span style="color:red"><strong>Invalid currency name</strong></span></span>
+    <br>
+
+    <label>Currency symbol:</label>
+    <input th:field="*{currencysymbol}" type="text"/>
+    <span th:if="${errors.contains('currencysymbol')}"><span style="color:red"><strong>Invalid currency symbol</strong></span></span>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

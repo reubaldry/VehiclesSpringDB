@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Model</title>
+</head>
+<body>
+<h1>Insert into model:</h1>
+
+<form action="#" method="post" th:action="@{/insert/model}" th:object="${model}">
+
+  <label>Fuel type:</label>
+  <select th:field="*{modelfueltype}" class="form-control">
+    <option th:each="fueltypeoption : ${fueltypes}" th:text="${fueltypeoption.getFueltypename()}" th:value="${fueltypeoption.getFueltypeid()}"></option>
+  </select>
+  <br>
+
+  <label>Type of vehicle:</label>
+  <select th:field="*{typeofvehicle}" class="form-control">
+    <option th:each="vehicleoption : ${vehicletypes}" th:text="${vehicleoption.getVehicletypename()}" th:value="${vehicleoption.getVehicletypeid()}"></option>
+  </select>
+  <br>
+
+  <label>Manufacture location:</label>
+  <select th:field="*{manufacturelocation}" class="form-control">
+    <option th:each="location : ${locations}" th:text="${location.getCountryname()}" th:value="${location.getCountryid()}"></option>
+  </select>
+  <br>
+
+  <label>Car make:</label>
+  <select th:field="*{carmake}" class="form-control">
+    <option th:each="makeoption : ${makes}" th:text="${makeoption.getMakename()}" th:value="${makeoption.getCarmakeid()}"></option>
+  </select>
+  <br>
+
+  <label>Model name:</label>
+  <input th:field="*{modelname}" type="text">
+  <span th:if="${errors.contains('modelname')}"><span style="color:red"><strong>Invalid model name</strong></span></span>
+  <br>
+
+  <label>Still produced:</label>
+  <input type="checkbox" th:field="*{stillproduced}">
+  <br>
+
+  <label>Number of cylinders:</label>
+  <input type="number" th:field="*{numberofcylinders}">
+  <span th:if="${errors.contains('numberofcylinders')}"><span style="color:red"><strong>Invalid number of cylinders</strong></span></span>
+  <br>
+
+  <label>Engine size:</label>
+  <input type="number" th:field="*{enginesize}">
+  <span th:if="${errors.contains('enginesize')}"><span style="color:red"><strong>Invalid engine size</strong></span></span>
+  <br>
+
+  <label>Number of doors</label>
+  <input type="number" th:field="*{numberofdoors}">
+  <span th:if="${errors.contains('numberofdoors')}"><span style="color:red"><strong>Invalid number of doors</strong></span></span>
+  <br>
+
+  <label>Is electric:</label>
+  <input type="checkbox" th:field="*{iselectric}">
+  <br>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

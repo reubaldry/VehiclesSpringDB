@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <h1>Please select a table:</h1>
+    <form stringField="#" th:stringField="@{/select}" th:object="${selection}" method="post">
+        <select th:field="*{fieldValue}" class="form-control">
+            <option value="0">Select action</option>
+            <option th:each="table : ${tables}" th:value="${table}" th:text="${table}"></option>
+        </select>
+
+        <button type="submit">Proceed</button>
+    </form>
+</body>
+</html>

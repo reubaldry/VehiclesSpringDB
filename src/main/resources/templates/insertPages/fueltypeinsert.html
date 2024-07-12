@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fueltype</title>
+</head>
+<body>
+<h1>Insert into fuel types:</h1>
+
+<form action="#" method="post" th:action="@{/insert/fueltype}" th:object="${fueltype}">
+    <label>Fuel type name:</label>
+    <input th:field="*{fueltypename}" type="text"/>
+    <span th:if="${errors.contains('fueltypename')}"><span style="color:red"><strong>Invalid fuel type name</strong></span></span>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

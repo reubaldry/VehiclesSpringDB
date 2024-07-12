@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> <span th:text="${table}"></span> entries:</h1>
+
+<table>
+    <tr>
+        <th>Fuel type id:&ensp;</th>
+        <th>Fuel type name:&ensp;</th>
+    </tr>
+    <tr th:each=" fueltype : ${fueltypes}">
+        <td> <span th:text="${fueltype.getFueltypeid()}"></span>: </td>
+        <td th:text="${fueltype.getFueltypename()}"></td>
+    </tr>
+</table>
+</body>
+</html>

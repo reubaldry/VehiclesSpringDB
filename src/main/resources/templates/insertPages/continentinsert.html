@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Continent</title>
+</head>
+<body>
+<h1>Insert into continents:</h1>
+
+<form action="#" method="post" th:action="@{/insert/continent}" th:object="${continent}">
+    <label>Continent name:</label>
+    <input th:field="*{continentname}" type="text"/>
+    <span th:if="${errors.contains('continentname')}"><span style="color:red"><strong>Invalid continent name</strong></span></span>
+    <br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

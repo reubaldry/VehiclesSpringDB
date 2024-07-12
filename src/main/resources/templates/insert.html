@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+</head>
+<body>
+    <h1>Choose a table to insert into:</h1>
+    <form action="#" th:action="@{/insert}" th:object="${selection}" method="post">
+        <select th:field="*{fieldValue}" class="form-control">
+            <option value="0">Select action</option>
+            <option th:each="table : ${tables}" th:value="${table}" th:text="${table}"></option>
+        </select>
+
+        <button type="submit">Proceed</button>
+    </form>
+</body>
+</html>

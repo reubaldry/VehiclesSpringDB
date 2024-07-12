@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Continents</title>
+</head>
+<body>
+    <h1> <span th:text="${table}"></span> entries:</h1>
+
+    <table>
+        <tr>
+            <th>Continent id:&ensp;</th>
+            <th>Continent name:&ensp;</th>
+        </tr>
+        <tr th:each=" continentobj : ${continents}">
+            <td> <span th:text="${continentobj.getContinentid()}"></span>: </td>
+            <td th:text="${continentobj.getContinentname()}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

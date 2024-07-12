@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Country</title>
+</head>
+<body>
+    <h1>Insert into country:</h1>
+
+    <form action="#" method="post" th:action="@{/insert/country}" th:object="${country}">
+        <label>Continent: </label>
+        <select th:field="*{continent}" class="form-control">
+            <option th:each="continentoption : ${continents}" th:text="${continentoption.getContinentname()}" th:value="${continentoption.getContinentid()}"></option>
+        </select>
+        <br>
+
+        <label>Country name: </label>
+        <input th:field="*{countryname}" type="text"/>
+        <span th:if="${errors.contains('countryname')}"><span style="color:red"><strong>Invalid country name</strong></span></span>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Vehicle db</title>
+</head>
+<body>
+<h1>Please select an action to take:</h1>
+
+<form stringField="#" th:stringField="@{/home}" th:object="${selection}" method="post">
+    <select th:field="*{fieldValue}" class="form-control">
+        <option value="0">Select action</option>
+        <option th:each="option : ${actions}" th:value="${option}" th:text="${option}"></option>
+    </select>
+
+    <button type="submit">Proceed</button>
+</form>
+
+</body>
+</html>

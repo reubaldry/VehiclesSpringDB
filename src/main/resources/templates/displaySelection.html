@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${table}"></title>
+</head>
+<body>
+<h1> <span th:text="${table}"></span> entries:</h1>
+
+<table>
+    <tr>
+        <th th:each="field : ${fields}">
+            <span th:text="${field.getFieldValue()}"></span>:&ensp;
+        </th>
+    </tr>
+    <tr th:each=" entry : ${entries}">
+        <td th:each="value : ${entry.getValues()}">
+            <span th:text="${value.getFieldValue()}"></span>
+        </td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>

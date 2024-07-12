@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles sold worldwide</title>
+</head>
+<body>
+<h1>Insert into vehiclessoldworldwide:</h1>
+
+<form action="#" method="post" th:action="@{/insert/vehiclessoldworldwide}" th:object="${vehiclessoldworldwide}">
+    <label>Car model:</label>
+    <select th:field="*{carmodel}" class="form-control">
+        <option th:each="modeloption : ${models}" th:text="${modeloption.getModelname()}" th:value="${modeloption.getCarmodelid()}"></option>
+    </select>
+    <br>
+
+    <label>Currency:</label>
+    <select th:field="*{currency}" class="form-control">
+        <option th:each="currencyoption : ${currencies}" th:text="${currencyoption.getCurrencysymbol()}" th:value="${currencyoption.getCurrencyid()}"></option>
+    </select>
+    <br>
+
+    <label>Country sold in:</label>
+    <select th:field="*{countrysoldin}" class="form-control">
+        <option th:each="countryoption : ${countries}" th:text="${countryoption.getCountryname()}" th:value="${countryoption.getCountryid()}"></option>
+    </select>
+    <br>
+
+    <label>Amount sold for:</label>
+    <input type="number" th:field="*{amountsoldfor}">
+    <span th:if="${errors.contains('amountsoldfor')}"><span style="color:red"><strong>Invalid amount</strong></span></span>
+    <br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

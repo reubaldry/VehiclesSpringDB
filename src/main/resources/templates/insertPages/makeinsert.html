@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Make</title>
+</head>
+<body>
+
+<h1>Insert into make:</h1>
+
+<form action="#" method="post" th:action="@{/insert/make}" th:object="${make}">
+    <label>Country:</label>
+    <select th:field="*{country}" class="form-control">
+        <option th:each="countryoption : ${countries}" th:text="${countryoption.getCountryname()}" th:value="${countryoption.getCountryid()}"></option>
+    </select>
+    <br>
+
+    <label>Make name:</label>
+    <input th:field="*{makename}" type="text">
+    <span th:if="${errors.contains('makename')}"><span style="color:red"><strong>Invalid make name</strong></span></span>
+    <br>
+
+    <label>Year established:</label>
+    <input type="date" th:field="*{yearestablished}">
+    <span th:if="${errors.contains('yearestablished')}"><span style="color:red"><strong>Invalid year established</strong></span></span>
+    <br>
+
+    <label>Net worth:</label>
+    <input type="number" th:field="*{networth}">
+    <span th:if="${errors.contains('networth')}"><span style="color:red"><strong>Invalid net worth</strong></span></span>
+    <br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
