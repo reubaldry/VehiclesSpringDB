@@ -4,7 +4,6 @@ import com.example.vehicelsweb.DAOs.CountryDao;
 import com.example.vehicelsweb.DAOs.CurrencyDao;
 import com.example.vehicelsweb.DAOs.ModelDao;
 import com.example.vehicelsweb.DAOs.VehiclessoldworldwideDao;
-import com.example.vehicelsweb.DbPOJOs.Make;
 import com.example.vehicelsweb.DbPOJOs.Vehiclessoldworldwide;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

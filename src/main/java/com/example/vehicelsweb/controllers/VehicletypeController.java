@@ -1,7 +1,6 @@
 package com.example.vehicelsweb.controllers;
 
 import com.example.vehicelsweb.DAOs.VehicletypeDao;
-import com.example.vehicelsweb.DbPOJOs.Make;
 import com.example.vehicelsweb.DbPOJOs.Vehicletype;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
